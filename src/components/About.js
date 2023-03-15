@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import Lottie from "lottie-react";
+import Chart from "/public/chart.json";
 
 const gradientAnimation = keyframes`
   0% {
@@ -15,21 +17,24 @@ const gradientAnimation = keyframes`
 
 const AboutContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: flex-start; */
+  flex-direction: row;
+  /* justify-content: space-between; */
   margin-top: 120px;
-  text-align: center;
+  /* text-align: center; */
   @media (max-width: 768px) {
     margin: auto 20px;
+    text-align: center;
+    /* width: 100%; */
   }
 `;
 
 const AboutWrapper = styled.div`
   /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; */
-  z-index: 1;
+  flex-direction: column;
+  align-items: flex-start; */
+  /* justify-content: space-between; */
+  /* z-index: 1; */
   @media (max-width: 768px) {
   }
 `;
@@ -47,32 +52,23 @@ const AboutTitle = styled.h3`
   }
 `;
 
-// const AboutImg = styled.img`
-//   width: 428px;
-//   height: 428px;
-//   transition: all 320ms ease-in-out;
-//   @media (max-width: 768px) {
-//     /* width: 448px;
-//     height: 326px; */
-//   }
-// `;
-
 const AboutText = styled.p`
   color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-family: ${({ theme }) => theme.fonts.body};
+  width: 75%;
   @media (max-width: 768px) {
     font-size: ${({ theme }) => theme.fontSizes.xSmall};
     padding: 10px;
     border: 1px solid ${({ theme }) => theme.colors.primary};
     border-radius: 12px;
+    width: 95%;
   }
 `;
 
-const AboutImage = styled.img`
-  width: 90%;
-  height: 272px;
-  position: absolute;
+const LottieStyles = styled(Lottie)`
+  width: 100%;
+  /* height: 500px; */
   @media (max-width: 768px) {
     display: none;
   }
@@ -81,7 +77,6 @@ const AboutImage = styled.img`
 function About() {
   return (
     <AboutContainer>
-      <AboutImage src="/aboutbG.png" alt="aboutBg" />
       <AboutWrapper>
         <AboutTitle>About</AboutTitle>
         <AboutText>
@@ -92,8 +87,8 @@ function About() {
           leverage trading, making it a uniquely attractive option in the world
           of cryptocurrency trading.
         </AboutText>
-        {/* <AboutImg src="/aboutImg.svg" alt="AboutImg" /> */}
       </AboutWrapper>
+      <LottieStyles animationData={Chart} />
     </AboutContainer>
   );
 }
