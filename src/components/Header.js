@@ -59,6 +59,11 @@ const NavLink = styled(Link)`
   }
 `;
 
+const DisabledNavLink = styled(NavLink)`
+  opacity: 0.3;
+  pointer-events: none;
+`;
+
 const Header = () => {
   const [width, setWidth] = useState(0);
 
@@ -85,14 +90,24 @@ const Header = () => {
           )}
           <NavLinks>
             <NavItem>
+              <DisabledNavLink disabled href={"/"}>
+                Dashboard
+              </DisabledNavLink>
+            </NavItem>
+            <NavItem>
+              <DisabledNavLink disabled href={"/"}>
+                Leaderboard
+              </DisabledNavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href={"/"}>Whitepaper</NavLink>
             </NavItem>
           </NavLinks>
         </RightSideLink>
         <Button
           title={"Launch app"}
-          smWidth={"50%"}
-          width={"25%"}
+          smWidth={"60%"}
+          width={"18%"}
           opacity={0.3}
           disabled
         />

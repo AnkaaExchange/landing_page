@@ -8,12 +8,18 @@ import styled from "styled-components";
 // import dapp from "/dapp.png";
 import ReactTypingEffect from "react-typing-effect";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import FeaturesCard from "@/components/FeaturesCard";
+import RoadMap from "@/components/Roadmap";
+import Tokenomics from "@/components/Tokenomics";
 
 const AppWrapper = styled.div`
   position: relative;
-  overflow: hidden;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
       217deg,
       rgba(0, 255, 138, 0.1),
@@ -21,15 +27,18 @@ const AppWrapper = styled.div`
     ),
     linear-gradient(127deg, rgba(0, 0, 4, 1), rgba(0, 0, 4, 1) 70.71%),
     linear-gradient(336deg, rgba(0, 255, 138, 1), rgba(0, 0, 4, 1) 70.71%);
-  padding: 0 70px 25px 70px;
+  padding: 0 90px 25px 90px;
   box-sizing: border-box;
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 0 20px 25px 20px;
+
+    /* height: 100vh; */
   }
 `;
 
 const HeroContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: 100%;
   align-items: center;
@@ -60,16 +69,31 @@ const HeroTitle = styled(ReactTypingEffect)`
   font-family: ${({ theme }) => theme.fonts.body};
   @media (max-width: 768px) {
     text-align: center;
-    font-size: ${({ theme }) => theme.fontSizes.xLarge};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
   }
 `;
 
 const StyledHeroImage = styled.img`
   width: 768px;
   height: 448px;
+  transition: all 320ms ease-in-out;
   @media (max-width: 768px) {
     width: 448px;
     height: 326px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const FeaturesWrapper = styled.div`
+  margin-top: 70px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -92,7 +116,7 @@ export default function Home() {
           <HeroTitle
             speed={120}
             eraseSpeed={80}
-            text={["Decentralized Perpetual Exchange"]}
+            text={["Pioneering the Boundless World of Perpetual DEXs"]}
           />
 
           <StyledHeroImage src="/dapp.png" alt="heroImg" />
@@ -108,6 +132,29 @@ export default function Home() {
             <Button title={"Whitepaper"} smWidth={"100%"} width={"25%"} />
           </ButtonContainer>
         </HeroContainer>
+        <About />
+        <FeaturesWrapper>
+          <FeaturesCard
+            title={"Lower Liquidation Risk"}
+            desc={
+              "A combination of top-notch price feeds decide the timing of liquidations, ensuring that positions remain secure against short-lived market fluctuations."
+            }
+          />
+          <FeaturesCard
+            title={"Cut Down on Expenses"}
+            desc={
+              "Open and close positions with minimal spread and no impact on market prices. Obtain the best possible price without incurring extra charges."
+            }
+          />
+          <FeaturesCard
+            title={"Up to 100x leverage"}
+            desc={
+              "allows traders to open larger positions than their account balance, offering the potential for greater profits."
+            }
+          />
+        </FeaturesWrapper>
+        <RoadMap />
+        <Tokenomics />
         <Footer />
       </AppWrapper>
     </>
