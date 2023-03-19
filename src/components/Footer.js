@@ -75,7 +75,7 @@ function Footer() {
         <FooterWrapper>
           <FooterLinks>
             <FooterItem>
-              <FooterLink href={"/"}>
+              <FooterLink target={"_blank"} href={"https://t.me/ANKAAPortal"}>
                 <FaTelegramPlane size={36} color={"#fff"} />
               </FooterLink>
             </FooterItem>

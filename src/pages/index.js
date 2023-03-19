@@ -116,7 +116,9 @@ export default function Home() {
           <HeroTitle
             speed={120}
             eraseSpeed={80}
-            text={["Pioneering the Boundless World of Perpetual DEXs"]}
+            text={[
+              "Pioneering the Boundless World of Perpetual DEXs on Arbitrum",
+            ]}
           />
 
           <StyledHeroImage src="/dapp.png" alt="heroImg" />
@@ -129,7 +131,12 @@ export default function Home() {
               opacity={0.3}
               disabled
             />
-            <Button title={"Whitepaper"} smWidth={"100%"} width={"25%"} />
+            <Button
+              title={"Whitepaper - Soon"}
+              smWidth={"100%"}
+              width={"25%"}
+              disabled
+            />
           </ButtonContainer>
         </HeroContainer>
         <About />

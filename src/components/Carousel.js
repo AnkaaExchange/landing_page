@@ -78,16 +78,17 @@ export function Carousel() {
         <CardTitle>Stage 2</CardTitle>
         <ListContainer>
           <ListOrder>Marketing campaign & Community Growth</ListOrder>
+          <ListOrder>Release Ankaa Exchange on Arbitrum Goerli</ListOrder>
           <ListOrder>IDO</ListOrder>
           <ListOrder>Dex Listing</ListOrder>
-          <ListOrder>Product launch [beta]</ListOrder>
         </ListContainer>
       </Slide>
       <Slide>
         <CardTitle>Stage 3</CardTitle>
         <ListContainer>
           <ListOrder>Marketing campaign</ListOrder>
-          <ListOrder>BSC & AVAX & POLYGON Integration</ListOrder>
+          <ListOrder>Release Ankaa Exchange on Arbitrum One</ListOrder>
+          <ListOrder>Expand to Other blockchains</ListOrder>
           <ListOrder>Interface Improvements</ListOrder>
           <ListOrder>Cex Listings</ListOrder>
         </ListContainer>
@@ -95,14 +96,20 @@ export function Carousel() {
       <Slide>
         <CardTitle>Stage 4</CardTitle>
         <ListContainer>
-          <ListOrder>NFT’s Leverage</ListOrder>
-          <ListOrder>ZKsync Integration</ListOrder>
+          <ListOrder>NFT’s floor price leverage</ListOrder>
+          <ListOrder>
+            Forex & commodities leverage feature up to 1000x
+          </ListOrder>
+          <ListOrder>
+            Development of new features such as take-profit stop-loss
+          </ListOrder>
+          <ListOrder>zkEVM Integration</ListOrder>
+          <ListOrder>Stock leverage feature 150x</ListOrder>
         </ListContainer>
       </Slide>
       <Slide>
         <CardTitle>Roadmap V2</CardTitle>
         <ListContainer>
-          <ListOrder>...</ListOrder>
           <ListOrder>...</ListOrder>
           <ListOrder>...</ListOrder>
           <ListOrder>...</ListOrder>
