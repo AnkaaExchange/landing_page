@@ -100,7 +100,12 @@ const Header = () => {
               </DisabledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink href={"/"}>Whitepaper</NavLink>
+              <NavLink
+                target={"_blank"}
+                href={"https://ankaa.gitbook.io/ankaa-exchange-doc/"}
+              >
+                Whitepaper
+              </NavLink>
             </NavItem>
           </NavLinks>
         </RightSideLink>

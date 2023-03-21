@@ -12,6 +12,7 @@ import About from "@/components/About";
 import FeaturesCard from "@/components/FeaturesCard";
 import RoadMap from "@/components/Roadmap";
 import Tokenomics from "@/components/Tokenomics";
+import Link from "next/link";
 
 const AppWrapper = styled.div`
   position: relative;
@@ -131,12 +132,12 @@ export default function Home() {
               opacity={0.3}
               disabled
             />
-            <Button
-              title={"Whitepaper - Soon"}
-              smWidth={"100%"}
-              width={"25%"}
-              disabled
-            />
+            {/* <Link
+              target={"_blank"}
+              href={"https://ankaa.gitbook.io/ankaa-exchange-doc/"}
+            >
+              <Button title={"Whitepaper"} smWidth={"100%"} width={"25%"} />
+            </Link> */}
           </ButtonContainer>
         </HeroContainer>
         <About />
